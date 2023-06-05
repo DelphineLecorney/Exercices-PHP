@@ -72,7 +72,17 @@
     echo "<br>";
     $totalHobbies = $countHobbiesMe + $countHobbiesSon;
     print_r("Total number of our hobbies :  $totalHobbies");
-    
+
+    echo "<br><br>";
+
+    // Add an element in a multi-dimensional array
+
+    // What I did => array_push($me['hobbies'], 'Taxidermy'); (same result but wich is better)
+    $me['hobbies'][] = 'Taxidermy'; 
+    echo '<pre>';
+    print_r($me['hobbies']);
+    echo '<pre>';
+
     ?>
 </body>
 </html>
