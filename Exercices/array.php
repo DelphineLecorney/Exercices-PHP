@@ -10,7 +10,14 @@
     <?php
     $family = array('Noel', 'Jocelyne', 'Jean-Noel', 'others');
     print_r($family);
-    $recipes = array();
+    echo "<br><br>";
+    $recipes = array('Vol au vent','Courgettes Farcies','Tartiflette', 'Hâchis parmentier');
+    print_r($recipes);
+    echo "<br><br>";
+    $films = array('Running Man', 'ça', 'Shining', 'Carrie', 'Dead Zone','Simetierre');
+    print_r($films);
+    echo "<br><br>";
+    echo "My favourite film : $films[0] <br><br>";
     ?>
 </body>
 </html>
