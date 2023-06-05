@@ -19,7 +19,7 @@
         echo "$pronoun $verbCode <br>";
     }
     echo "<br><br>";
-    
+
     // Write a script that prints the numbers from 1 to 120 using  while 
 
     $numbers = 1;
@@ -29,6 +29,46 @@
         $numbers ++;
     }
 
+    echo "<br><br>";
+
+    // Write a script that prints the numbers from 1 to 120 using  for 
+
+    for($numbers = 1; $numbers <= 120; $numbers ++){
+        echo $numbers;
+    }
+
+    echo "<br><br>";
+
+    // Create an array containing the firstname of everyone in your startup. 
+    // Display each firstname using a loop.
+
+    $firstnameWilson2 = [
+        'Abel', 
+        'Alexandra', 
+        'Anthony', 
+        'Benjamin', 
+        'Bruno', 
+        'Delphine', 
+        'Emilien', 
+        'Ethan', 
+        'Ismaël', 
+        'Jodie', 
+        'Julien', 
+        'Louka', 
+        'Loïc', 
+        'Luciano', 
+        'Marine', 
+        'Nikko', 
+        'Noa',
+        'Steve', 
+        'Sylvain', 
+        'Thomas', 
+        'Willy'
+    ];
+
+    foreach($firstnameWilson2 as $firstnameWilson) {
+        echo "$firstnameWilson <br>";
+    }
     ?>
 
 </body>
