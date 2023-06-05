@@ -42,6 +42,27 @@
     print_r($me);
     echo '</pre>';  
 
+    echo "<br><br>";
+    
+    // Multidimensional arrays
+    $me['hobbies'] = array('Computer', 'Netflix', 'Garden', 'Games mmorpg');
+    
+    $son = array(
+        'firstname' => 'Noël',
+        'lastname' => 'Lecorney',
+        'age' => 27,
+        'my favourite season' => 'Summer',
+        'I like soccer' => FALSE ? 'Yes' : 'No'
+    );
+    
+    $son['hobbies'] = array('Games', 'Airsoft', 'Remote-controlled cars', 'drones');
+    
+    $me['son'] = $son;
+    
+    echo '<pre>';
+    print_r($me);
+    echo '</pre>';
+    
 
     ?>
 </body>
