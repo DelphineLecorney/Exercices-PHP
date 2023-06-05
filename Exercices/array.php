@@ -63,7 +63,16 @@
     print_r($me);
     echo '</pre>';
     
-
+    // Count the number of elements
+    $countHobbiesSon = count($son['hobbies']);
+    print_r("Number of son's hobbies: $countHobbiesSon");
+    echo "<br>";
+    $countHobbiesMe = count($me['hobbies']);
+    print_r("Number of my hobbies : $countHobbiesMe");
+    echo "<br>";
+    $totalHobbies = $countHobbiesMe + $countHobbiesSon;
+    print_r("Total number of our hobbies :  $totalHobbies");
+    
     ?>
 </body>
 </html>
