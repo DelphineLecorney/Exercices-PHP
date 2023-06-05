@@ -7,6 +7,7 @@
     <title>Array</title>
 </head>
 <body>
+
     <?php
     $family = array('Noel', 'Jocelyne', 'Jean-Noel', 'others');
     print_r($family);
@@ -83,6 +84,33 @@
     print_r($me['hobbies']);
     echo '<pre>';
 
+    // Replace an element
+
+    echo "Replace an element";
+    $me['lastname'] = 'Durand';
+
+    echo '<pre>';
+    print_r($me);
+    echo '<pre>';
+
+    // Create a new array from 2 others (or more)
+
+    $soulmate = array(
+        'firstname' => 'Kevin',
+        'lastname' => 'Costner',
+        'age' => 60,
+        'my favourite season' => 'Winter',
+        'I like soccer' => TRUE ? 'Yes' : 'No',
+        'hobbies' => array('Computer', 'Netflix', 'Action', 'Walk')
+    );
+    $resHobbies = array_intersect($me, $soulmate);
+    echo '<pre>';
+    var_dump($resHobbies);
+    echo '<pre>';
+
+
     ?>
+
+    <!-- https://www.php.net/manual/fr/language.types.array.php -->
 </body>
 </html>
