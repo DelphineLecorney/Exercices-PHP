@@ -69,7 +69,29 @@
     foreach($firstnameWilson2 as $firstnameWilson) {
         echo "$firstnameWilson <br>";
     }
-    ?>
+
+    echo "<br><br>";
+
+    // Create an array containing at least 10 countries. 
+    // Then, generate the html that will render a select box inside an html form (see mockup below).
+    
+    $countries = [
+        'Argentina',
+        'Australia',
+        'Austria',
+        'Belgium',
+        'Brazil',
+        'Canada',
+        'China',
+        'Denmark',
+        'Egypt',
+        'France'
+    ]?>
+    <label for= "countries">Choose a country : </label>
+    <select name="country" id="country">
+        <option value>
+    
+    
 
 </body>
 </html>
