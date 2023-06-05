@@ -124,16 +124,34 @@
     <!-- Other exercices  -->
 
     <?php
+
     $web_development = array(
         'frontend' => [],
         'backend' => []
     );
+    // Add lines in the right tab
+    array_push($web_development['frontend'], 'xhtml');
+    array_push($web_development['backend'], 'Ruby on Rails');
+    array_push($web_development['frontend'], 'css');
+    array_push($web_development['frontend'], 'Flash');
+    array_push($web_development['frontend'], 'Javascript');
     
-    $web_development['frontend'] = 'xhtml';
+    // Add a line that replace 'xhtml' by 'html'.
+    $replaceXHTML = array_search('xhtml', $web_development['frontend']);
+    if ($replaceXHTML !== false) {
+        $web_development['frontend'][$replaceXHTML] = 'html';
+    };
+    // Add a line that removes 'Flash' from the array.
+    $removeFlash = array_search('Flash', $web_development['frontend']);
+    if ($removeFlash !== false) {
+        array_splice($web_development['frontend'], $removeFlash, 1);
+    }
+    // Display with 'print_r()'
     echo "Display the push of a line in a tab with 'print_r()' : <br>";
     echo '<pre>';
-    print_r($web_development);
+    print_r($web_development); 
     echo '<pre>';
+    // Display with 'var_dump()'
     echo "Display the push of a line in a tab with 'var_dump()' : <br>";
     echo "<br>";
     var_dump($web_development);
