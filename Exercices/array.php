@@ -106,11 +106,17 @@
 
     // Either intersection (only the hobbies common to both arrays)
 
-    $resHobbies = array_intersect($me['hobbies'], $soulmate['hobbies']);
+    $resHobbiesInter = array_intersect($me['hobbies'], $soulmate['hobbies']);
     echo '<pre>';
-    print_r($resHobbies);
+    print_r($resHobbiesInter);
     echo '<pre>';
 
+    // A fusion (all the hobbies of each array together)
+
+    $resHobbiesFusion = array_merge($me['hobbies'], $soulmate['hobbies']);
+    echo '<pre>';
+    print_r($resHobbiesFusion);
+    echo '<pre>';
 
     ?>
 
