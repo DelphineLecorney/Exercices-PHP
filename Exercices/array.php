@@ -117,9 +117,28 @@
     echo '<pre>';
     print_r($resHobbiesFusion);
     echo '<pre>';
-
     ?>
+  
+    <!-- ------------------------------------------------------------------------------ -->
+    
+    <!-- Other exercices  -->
 
-    <!-- https://www.php.net/manual/fr/language.types.array.php -->
+    <?php
+    $web_development = array(
+        'frontend' => [],
+        'backend' => []
+    );
+    
+    $web_development['frontend'] = 'xhtml';
+    echo "Display the push of a line in a tab with 'print_r()' : <br>";
+    echo '<pre>';
+    print_r($web_development);
+    echo '<pre>';
+    echo "Display the push of a line in a tab with 'var_dump()' : <br>";
+    echo "<br>";
+    var_dump($web_development);
+    ?>
+<!-- https://www.php.net/manual/fr/language.types.array.php -->
+
 </body>
 </html>
