@@ -103,9 +103,12 @@
         'I like soccer' => TRUE ? 'Yes' : 'No',
         'hobbies' => array('Computer', 'Netflix', 'Action', 'Walk')
     );
-    $resHobbies = array_intersect($me, $soulmate);
+
+    // Either intersection (only the hobbies common to both arrays)
+
+    $resHobbies = array_intersect($me['hobbies'], $soulmate['hobbies']);
     echo '<pre>';
-    var_dump($resHobbies);
+    print_r($resHobbies);
     echo '<pre>';
 
 
