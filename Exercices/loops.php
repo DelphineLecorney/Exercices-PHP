@@ -97,11 +97,5 @@
         <?php endforeach; ?>
     </select>
 </form>
-
-   
-        
-    
-    
-
 </body>
 </html>
