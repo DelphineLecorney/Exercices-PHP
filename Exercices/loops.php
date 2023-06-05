@@ -42,7 +42,7 @@
     // Create an array containing the firstname of everyone in your startup. 
     // Display each firstname using a loop.
 
-    $firstnameWilson2 = [
+    $firstnameWilson2 = array(
         'Abel', 
         'Alexandra', 
         'Anthony', 
@@ -64,7 +64,7 @@
         'Sylvain', 
         'Thomas', 
         'Willy'
-    ];
+    );
 
     foreach($firstnameWilson2 as $firstnameWilson) {
         echo "$firstnameWilson <br>";
@@ -75,26 +75,25 @@
     // Create an array containing at least 10 countries. 
     // Then, generate the html that will render a select box inside an html form (see mockup below).
     
-    $countries = [
-        'Argentina',
-        'Australia',
-        'Austria',
-        'Belgium',
-        'Brazil',
-        'Canada',
-        'China',
-        'Denmark',
-        'Egypt',
-        'France'
-    ];
+    $countries = array(
+        'AR' => 'Argentina',
+        'AU' => 'Australia',
+        'AT' => 'Austria',
+        'BE' => 'Belgium',
+        'BR' => 'Brazil',
+        'CA' => 'Canada',
+        'CN' => 'China',
+        'DK' => 'Denmark',
+        'EG' => 'Egypt',
+        'FR' => 'France'
+    );
 
     ?> 
-    <!-- https://www.codesnipper.com/snippets/php/php-foreach-loop-on-select-element?reference=2360646893 -->
 <form>
     <label for= "countries">Choose a country : </label>
     <select name="country" id="country">
-        <?php foreach($countries as $country) : ?>
-            <option value = "<?php echo $country; ?>"><?php echo $country; ?></option>
+        <?php foreach($countries as $codeISO => $country) : ?>
+            <option value = "<?php echo $codeISO; ?>"><?php echo $country; ?></option>
         <?php endforeach; ?>
     </select>
 </form>
