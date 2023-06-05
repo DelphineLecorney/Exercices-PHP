@@ -86,10 +86,21 @@
         'Denmark',
         'Egypt',
         'France'
-    ]?>
+    ];
+
+    ?> 
+    <!-- https://www.codesnipper.com/snippets/php/php-foreach-loop-on-select-element?reference=2360646893 -->
+<form>
     <label for= "countries">Choose a country : </label>
     <select name="country" id="country">
-        <option value>
+        <?php foreach($countries as $country) : ?>
+            <option value = "<?php echo $country; ?>"><?php echo $country; ?></option>
+        <?php endforeach; ?>
+    </select>
+</form>
+
+   
+        
     
     
 
