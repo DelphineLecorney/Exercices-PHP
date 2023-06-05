@@ -20,13 +20,28 @@
     echo "My favourite film : $films[0] <br><br>";
 
     // Another way to display an array
+    // display in a performatted text
     echo '<pre>';
     print_r($films);
     echo '</pre>';
 
-    // var_dump display in a performatted text
+    // var_dump displays information includinf data type and contents
     echo "Display with var_dump : <br>";
     var_dump($films);
+    echo "<br><br>";
+
+    // An associative array
+    $me = array(
+        'firstname' => 'Delphine',
+        'lastname' => 'Lecorney',
+        'age' => 52,
+        'my favourite season' => 'Spring',
+        'I like soccer' => TRUE ? 'Yes' : 'No'
+    );
+    echo '<pre>';
+    print_r($me);
+    echo '</pre>';  
+
 
     ?>
 </body>
