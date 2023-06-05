@@ -9,17 +9,29 @@
 <body>
     <?php
         
-        $phrase = 
-        "According to a researcher (sic) at Cambridge University, it doesn't matter 
-        in what order the letters in a word are, the only important thing is that the first 
-        and last letter be at the right place. The rest can be a total mess and you can still 
-        read it without problem. This is because the human mind does not read every letter by 
-        itself but the word as a whole.";
+    $phrase = 
+    "According to a researcher (sic) at Cambridge University, it doesn't matter 
+    in what order the letters in a word are, the only important thing is that the first 
+    and last letter be at the right place. The rest can be a total mess and you can still 
+    read it without problem. This is because the human mind does not read every letter by 
+    itself but the word as a whole.";
     // Make sure that the separator parameter is placed before the string parameter.
-        $phrase = explode(" ", $phrase);
-        foreach($phrase as $tab){
-            echo str_shuffle($tab." ");
-        }        
+    $phrase = explode(" ", $phrase);
+    foreach($phrase as $tab){
+        echo str_shuffle($tab." ");
+    }   
+    echo "<br>";
+
+    // Use a function that capitalizes the first letter of the provided argument. 
+    // Example: "émile"should return "Émile"
+    $name = "émile";
+    echo mb_convert_case($name, MB_CASE_TITLE, "UTF-8");
+
+    echo "<br>";
+    
+    // Use the native function allowing you to display the current year.    
+    echo date("Y");
+
     ?>
 </body>
 </html>
