@@ -18,6 +18,16 @@
     print_r($films);
     echo "<br><br>";
     echo "My favourite film : $films[0] <br><br>";
+
+    // Another way to display an array
+    echo '<pre>';
+    print_r($films);
+    echo '</pre>';
+
+    // var_dump display in a performatted text
+    echo "Display with var_dump : <br>";
+    var_dump($films);
+
     ?>
 </body>
 </html>
