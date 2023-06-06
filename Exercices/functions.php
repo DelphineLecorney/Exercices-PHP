@@ -105,6 +105,22 @@
     echo $resWordsBis;
 
     echo '<br><br>';
+
+    // Create a function to return "notice", "warning" and "error" messages 
+    // to a user,which takes 2 arguments : the "message", and the "css class" 
+    // (values: "info", "error", "warning"). This function would allow us to write this :
+    function feedback($message, $cssClass) {
+        $values = ["info", "error", "warning"];
+        if(!in_array($cssClass, $values)){
+            return "This isn't a right css class";
+        }
+        $messageHTML = '<div class="'.$cssClass .'">'.$cssClass.':'.$message.'.'.'<div>';
+        
+        return $messageHTML;
+    }
+    $resMessage = feedback('Incorrect email address', 'error');
+    echo $resMessage;
+    
     ?>
 </body>
 </html>
