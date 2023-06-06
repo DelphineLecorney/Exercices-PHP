@@ -56,11 +56,30 @@
     function sum2($a, $b){
         if(is_numeric($a) && is_numeric($b)){
             return $a + $b;
-        }echo "Error: argument is the not a number.";
+        }echo "Error: argument is not a number.";
     }
     $res2 = sum2("j", 20);
     echo "$res2";
 
+    echo '<br>';
+
+    // Create a function that takes as argument a string of characters 
+    // and returns an acronym made of the initials of each word.
+    // Example: "In code we trust!" should return: ICWT).
+    function initialsWord($string){
+        $initial = '';
+        $words = explode(" ", $string);
+    
+        foreach($words as $firstLetter){
+            $initial .= $firstLetter[0];
+        }
+        return strtoupper($initial);
+    }
+    
+    $phrase = "In code we trust!";
+    $resPhrase = initialsWord($phrase);
+    echo $resPhrase;
+    
     ?>
 </body>
 </html>
