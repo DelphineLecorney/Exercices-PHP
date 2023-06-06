@@ -120,6 +120,21 @@
     }
     $resMessage = feedback('Incorrect email address', 'error');
     echo $resMessage;
+
+    // Improve that function by giving the default class the value of "info". 
+    // Look into the documentation documentation php.
+    function feedbackBis($message, $cssClass='info') {
+        $values = ["info", "error", "warning"];
+        if(!in_array($cssClass, $values)){
+            return "This isn't a right css class";
+        }
+        $messageHTML = '<div class="'.$cssClass .'">'.$cssClass.':'.$message.'.'.'<div>';
+        
+        return $messageHTML;
+    }
+    $resMessage = feedbackBis('Incorrect email address');
+    echo $resMessage;
+
     
     ?>
 </body>
