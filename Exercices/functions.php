@@ -48,6 +48,18 @@
     $res = sum(5, 5);
     echo "$res";
 
+    echo "<br>";
+
+    // Improve that function so that it checks whether the argument is indeed a Number. 
+    // If not, it should display : "Error: argument is the not a number."
+
+    function sum2($a, $b){
+        if(is_numeric($a) && is_numeric($b)){
+            return $a + $b;
+        }echo "Error: argument is the not a number.";
+    }
+    $res2 = sum2("j", 20);
+    echo "$res2";
 
     ?>
 </body>
