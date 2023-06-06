@@ -84,17 +84,27 @@
     echo '<br><br>';
     
     // Create a function that replaces the letters "a" and "e" with "æ". 
+    $wordsExample = 'caecotrophie, caenichthys, microsphaera, sphaerotheca';
     function replaceLetters($words){
             $words = str_replace("ae", "æ", $words);
             return $words;
         }
-    $wordsExample = 'caecotrophie, chaenichthys,microsphaera, sphaerotheca';
-    echo $wordsExample;
-    echo '<br>';
-
     $resWords = replaceLetters($wordsExample);
-    echo $resWords
+    echo $resWords;
+    
+    echo '<br><br>';
+    
+    // Create the opposite function, which replaces "æ" by "ae" in : 
+    // cæcotrophie, chænichthys, microsphæra, sphærotheca
+    $wordsExampleBis = 'cæcotrophie, chænichthys, microsphæra, sphærotheca';
+    function replaceLettersBis($words){
+        $wordsBis = str_replace("æ", "ae", $words);
+        return $wordsBis;
+    }
+    $resWordsBis = replaceLettersBis($wordsExampleBis);
+    echo $resWordsBis;
 
+    echo '<br><br>';
     ?>
 </body>
 </html>
