@@ -36,6 +36,19 @@
 
     // Now display the date, time, minutes and seconds, using the same function, by playing with the arguments.
     echo date('l d m Y h:i:s');
+
+    echo "<br>";
+
+    // Crée a "Sum" function that takes 2 numbers and returns their sum.
+
+    function sum($a, $b){
+        return $a + $b;
+    }
+
+    $res = sum(5, 5);
+    echo "$res";
+
+
     ?>
 </body>
 </html>
