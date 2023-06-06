@@ -32,6 +32,10 @@
     // Use the native function allowing you to display the current year.    
     echo date("Y");
 
+    echo "<br>";
+
+    // Now display the date, time, minutes and seconds, using the same function, by playing with the arguments.
+    echo date('l d m Y h:i:s');
     ?>
 </body>
 </html>
