@@ -135,6 +135,25 @@
     $resMessage = feedbackBis('Incorrect email address');
     echo $resMessage;
 
+    // Create a random words generator, outputing 2 words: one which length 
+    // is between 1 to 5 letters, the other between 7 and 15 letters.
+    // The screen will display a title "Generate a new word", and then
+    // the two generated words, and underneath, a bouton with the text "Generate").
+    
+    function wordsGenerator($minLength, $maxLength){
+        $alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        $word = "";
+        $nbLetters = rand($minLength, $maxLength);
+        // https://www.php.net/manual/fr/function.substr.php
+        $word = substr(str_shuffle($alphabet), 0, $nbLetters);
+        return $word;
+    }
+    
+    $firstWord = wordsGenerator(1,5);
+    $secondWord = wordsGenerator(7, 15);
+    
+    echo $firstWord . "<br>";
+    echo $secondWord;
     
     ?>
 </body>
