@@ -19,6 +19,9 @@
             <p class="radio"> Do you prefer Andy Warhol or Basquiat ? 
                 <input name="prefer" type="radio" value="Andy-Warhol">Andy Warhol
                 <input name="prefer" type="radio" value="Basquiat">Basquiat
+            <p class="radio"> Are you classic music ou Jazz ? 
+                <input name="prefer" type="radio" value="Classic-music">Classic music
+                <input name="prefer" type="radio" value="Jazz">Jazz
             <p class="about"> About you : </p>
             <textarea name="biography"></textarea><br>
             <input name="submit" type="submit" value="Submit" class="submit">
