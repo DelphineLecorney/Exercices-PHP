@@ -167,9 +167,19 @@
     $str = strtolower($str);
     echo $str;
 
+    echo '<br><br>';
 
+    // In your new job, you have to maintain the code of a former developer. 
+    // Make it DRY by creating a custom function calculate_cone_volume :
 
-
+    function calculate_cone_volume($ray, $height){
+        // Volume of a cone = (Pi) multiply (ray**2) multiply (height) multiply 1/3
+        $volume = $ray * $ray * 3.14 * $height * (1/3);
+        echo 'The volume of a cone with ray ' . $ray . ' and height ' . $height . ' is ' . $volume . ' cm<sup>3</sup><br />';
+    }
+    calculate_cone_volume(5, 2);
+    calculate_cone_volume(3, 4);
+    
     ?>
 
 
