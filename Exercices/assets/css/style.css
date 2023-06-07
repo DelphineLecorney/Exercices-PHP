@@ -41,4 +41,13 @@ header {
 .container input {
     margin-bottom: 10px;
 }
-
+.result {
+    background-color: #e3e0e0;
+    color: rgb(104, 104, 110);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.error {
+    color: red;
+}

@@ -58,12 +58,12 @@
         ?>
         <div class="result">
 
-            <h2>Result :</h2>
+            <h2>Informations :</h2>
                 <ul>
-                <li><strong>Fullname :</strong> <?php echo $filterFullname; ?></li>
-                <li><strong>Age :</strong> <?php echo $filterAge; ?></li>
-                <li><strong>Preferences :</strong><?php echo  $filterPrefer; ?></li>
-                <li><strong>About you :</strong> <?php echo $biography; ?></li>
+                <li><strong>Fullname :</strong> <?php echo '<span class="result-user">' .$filterFullname; ?></li>
+                <li><strong>Age :</strong> <?php echo '<span class="result-user">' .$filterAge; ?></li>
+                <li><strong>Preferences :</strong><?php echo  '<span class="result-user">' .$filterPrefer; ?></li>
+                <li><strong>About you :</strong> <?php echo '<span class="result-user">' .$biography; ?></li>
                 </ul>
         </div>
     <?php
