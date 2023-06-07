@@ -15,13 +15,13 @@
         <form method="GET" action="form.php">
 
             <p class ="name"> Please enter your fullname : <input name="fullname" type="text">
-            <p class="age"> Please entre your age : <input name="age" type="number" value="age">
+            <p class="age"> Please enter your age : <input name="age" type="number" value="age">
             <p class="radio"> Do you prefer Andy Warhol or Basquiat ? 
                 <input name="prefer" type="radio" value="Andy-Warhol">Andy Warhol
                 <input name="prefer" type="radio" value="Basquiat">Basquiat
             <p class="about"> About you : </p>
             <textarea name="biography"></textarea><br>
-            <input name="submit" type="submit" value="Submit">
+            <input name="submit" type="submit" value="Submit" class="submit">
         </form>
 
         <?php
@@ -58,12 +58,12 @@
         ?>
         <div class="result">
 
-            <h2>Informations :</h2>
+            <h2>Informations</h2>
                 <ul>
-                <li><strong>Fullname :</strong> <?php echo '<span class="result-user">' .$filterFullname; ?></li>
-                <li><strong>Age :</strong> <?php echo '<span class="result-user">' .$filterAge; ?></li>
-                <li><strong>Preferences :</strong><?php echo  '<span class="result-user">' .$filterPrefer; ?></li>
-                <li><strong>About you :</strong> <?php echo '<span class="result-user">' .$biography; ?></li>
+                <li><strong>Fullname : </strong> <?php echo '<span class="result-user">' .$filterFullname; ?></li>
+                <li><strong>Age : </strong> <?php echo '<span class="result-user">' .$filterAge; ?></li>
+                <li><strong>Preferences : </strong><?php echo  '<span class="result-user">' .$filterPrefer; ?></li>
+                <li><strong>About you : </strong> <?php echo '<br><br><span class="result-user">' .$biography; ?></li>
                 </ul>
         </div>
     <?php
