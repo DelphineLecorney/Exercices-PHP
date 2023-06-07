@@ -1,4 +1,4 @@
-<!DOCTYphraseE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -159,6 +159,19 @@
     echo '<form method="GET" action="">';
     echo '<button type="submit" name="generate" value="true">Generate</button>';
     echo '</form>';
+
+    echo '<br><br>';
+    // De-capitalize the string : "STOP YELLING I CAN'T HEAR MYSELF THINKING!!"
+
+    $str = "STOP YELLING I CAN'T HEAR MYSELF THINKING!!";
+    $str = strtolower($str);
+    echo $str;
+
+
+
+
     ?>
+
+
 </body>
 </html>
