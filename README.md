@@ -4,7 +4,7 @@
 >
 > #### This is exercises in Becode training.
 
- ![Screen Form](https://github.com/DelphineLecorney/Exercices-PHP/commit/6c8a49f9f09784a3c7c0eab466d6768e00e794de)
+ ![Screen Form](Exercices/assets/pictures/interview.jpg)
 
 ## Making a form is to ask questions. Kind of like an interview.
 
