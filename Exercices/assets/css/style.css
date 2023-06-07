@@ -22,4 +22,23 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.container h2 {
+    margin-top: 0;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+.container ul li strong {
+    font-weight: bold;
+}
+.container input {
+    margin-bottom: 10px;
+}
 

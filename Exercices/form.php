@@ -48,10 +48,10 @@
                 }
 
                 if(!empty($errors)) {
-                    $warning = "Warning: ";
+                    $warning = "Warning : ";
                     echo $warning;
                     foreach($errors as $error) {
-                        echo $error . ". ";
+                        echo '<span class="error">'. $error . ". ";
                     }
                     exit;
                 }
