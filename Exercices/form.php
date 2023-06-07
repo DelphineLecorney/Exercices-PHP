@@ -24,46 +24,50 @@
             <input name="submit" type="submit" value="Submit">
         </form>
 
+        <?php
+            if(isset($_GET['submit'])) {
+                $fullname = $_GET['fullname'];
+                $age = $_GET['age'];
+                $prefer = isset($_GET['prefer']) ? $_GET['prefer'] : '';
+                $biography = $_GET['biography'];
+
+                $filterFullname = filter_var($fullname, FILTER_SANITIZE_STRING);
+                $filterAge = filter_var($age, FILTER_VALIDATE_INT);
+                $filterPrefer = filter_var($prefer, FILTER_SANITIZE_SPECIAL_CHARS);
+
+                $errors = [];
+
+                if(empty($filterFullname)) {
+                    $errors[] = 'Fullname is required';
+                }
+                if(empty($filterAge)) {
+                    $errors[] = 'Age is required';
+                }
+                if(empty($filterPrefer)) {
+                    $errors[] = 'Choose your preferences !';
+                }
+
+                if(!empty($errors)) {
+                    $warning = "Warning: ";
+                    echo $warning;
+                    foreach($errors as $error) {
+                        echo $error . ". ";
+                    }
+                    exit;
+                }
+        ?>
+        <div class="result">
+
+            <h2>Result :</h2>
+                <ul>
+                <li><strong>Fullname :</strong> <?php echo $filterFullname; ?></li>
+                <li><strong>Age :</strong> <?php echo $filterAge; ?></li>
+                <li><strong>Preferences :</strong><?php echo  $filterPrefer; ?></li>
+                <li><strong>About you :</strong> <?php echo $biography; ?></li>
+                </ul>
+        </div>
     <?php
-    if(isset($_GET['submit'])) {
-        $fullname = $_GET['fullname'];
-        $age = $_GET['age'];
-        $prefer = isset($_GET['prefer']) ? $_GET['prefer'] : '';
-        $biography = $_GET['biography'];
-
-        $filterFullname = filter_var($fullname, FILTER_SANITIZE_STRING);
-        $filterAge = filter_var($age, FILTER_VALIDATE_INT);
-        $filterPrefer = filter_var($prefer, FILTER_SANITIZE_SPECIAL_CHARS);
-
-        $errors = [];
-
-        if(empty($filterFullname)) {
-            $errors[] = 'Fullname is required';
-        }
-        if(empty($filterAge)) {
-            $errors[] = 'Age is required';
-        }
-        if(empty($filterPrefer)) {
-            $errors[] = 'Choose your preferences !';
-        }
-
-        if(!empty($errors)) {
-            $warning = "Warning: ";
-            echo $warning;
-            foreach($errors as $error) {
-                echo $error . ". ";
-            }
-            exit;
-        }
     }
-    echo "<h2>Result :</h2>";
-        echo "<ul>";
-        echo "<li><strong>Fullname :</strong> $filterFullname</li>";
-        echo "<li><strong>Age :</strong> $filterAge</li>";
-        echo "<li><strong>Preferences :</strong> $filterPrefer</li>";
-        echo "<li><strong>About you :</strong> $biography</li>";
-        echo "</ul>";
-
     ?>
     </div>
 </body>
