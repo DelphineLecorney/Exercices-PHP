@@ -21,20 +21,38 @@
     </form>
 
 <?php
-if(isset($GET['submit'])) {
+if(isset($_GET['submit'])) {
     $fullname = $_GET['fullname'];
     $age = $_GET['age'];
-    $prefer = $_GET['prefer'];
-    $biography = $_GET['biography'];
+    $prefer = isset($_GET['prefer']) ? $_GET['prefer'] : '';
 
     $filterFullname = filter_var($fullname, FILTER_SANITIZE_STRING);
     $filterAge = filter_var($age, FILTER_VALIDATE_INT);
     $filterPrefer = filter_var($prefer, FILTER_SANITIZE_SPECIAL_CHARS);
-    $filterBiography = filter_var($biography, FILTER_SANITIZE_STRING);
 
+    $errors = [];
+    $warning ="Warning : ";
+
+    if(empty($filterFullname)){
+        $errors[] = 'Fullname is required';
+    }
+    if(empty($filterAge)){
+        $errors[] = 'Age is required';
+    }
+    if(empty($prefer)) {
+        $errors[] = 'Choose everything !';
+    }
+    if($errors > 0) {
+        echo $warning;
+        foreach($errors as $error) {
+            echo $error.".";
+        }
+    }
+    exit;
+    
 }
-    echo "<pre>";
-    print_r($_GET);
+    // echo "<pre>";
+    // print_r($_GET);
 
 ?>
 </body>
