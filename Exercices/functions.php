@@ -144,17 +144,21 @@
         $alphabet = 'abcdefghijklmnopqrstuvwxyz';
         $word = "";
         $nbLetters = rand($minLength, $maxLength);
-        // https://www.php.net/manual/fr/function.substr.php
         $word = substr(str_shuffle($alphabet), 0, $nbLetters);
         return $word;
+    }   
+    if (isset($_GET['generate'])) {
+
+        $firstWord = wordsGenerator(1,5);
+        $secondWord = wordsGenerator(7, 15);
+
+        echo '<h1>Generate a new word</h1>';
+        echo '<p>' . $firstWord . '</p>';
+        echo '<p>' . $secondWord . '</p>';
     }
-    
-    $firstWord = wordsGenerator(1,5);
-    $secondWord = wordsGenerator(7, 15);
-    
-    echo $firstWord . "<br>";
-    echo $secondWord;
-    
+    echo '<form method="GET" action="">';
+    echo '<button type="submit" name="generate" value="true">Generate</button>';
+    echo '</form>';
     ?>
 </body>
 </html>
