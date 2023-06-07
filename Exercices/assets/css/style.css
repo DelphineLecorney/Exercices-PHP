@@ -1,0 +1,10 @@
+@import 'reset.css';
+body {
+    background-color: bisque;
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+    font-size: 50px;
+}
