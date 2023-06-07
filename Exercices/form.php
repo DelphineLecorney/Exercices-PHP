@@ -20,7 +20,7 @@
         <input name="submit" type="submit" value="Submit">
     </form>
 
-<?php
+    <?php
 if(isset($_GET['submit'])) {
     $fullname = $_GET['fullname'];
     $age = $_GET['age'];
@@ -31,7 +31,6 @@ if(isset($_GET['submit'])) {
     $filterPrefer = filter_var($prefer, FILTER_SANITIZE_SPECIAL_CHARS);
 
     $errors = [];
-    $warning ="Warning : ";
 
     if(empty($filterFullname)){
         $errors[] = 'Fullname is required';
@@ -39,20 +38,21 @@ if(isset($_GET['submit'])) {
     if(empty($filterAge)){
         $errors[] = 'Age is required';
     }
-    if(empty($prefer)) {
-        $errors[] = 'Choose everything !';
+    if(empty($filterPrefer)) {
+        $errors[] = 'Choose your preferences!';
     }
-    if($errors > 0) {
+
+    if(!empty($errors)) {
+        $warning = "Warning: ";
         echo $warning;
         foreach($errors as $error) {
-            echo $error.".";
+            echo $error . ". ";
         }
+        exit;
     }
-    exit;
-    
 }
-    // echo "<pre>";
-    // print_r($_GET);
+    echo "<pre>";
+    print_r($_GET);
 
 ?>
 </body>
