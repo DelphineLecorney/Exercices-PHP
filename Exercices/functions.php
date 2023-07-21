@@ -1,4 +1,4 @@
-<!DOCTYphraseE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -144,17 +144,44 @@
         $alphabet = 'abcdefghijklmnopqrstuvwxyz';
         $word = "";
         $nbLetters = rand($minLength, $maxLength);
-        // https://www.php.net/manual/fr/function.substr.php
         $word = substr(str_shuffle($alphabet), 0, $nbLetters);
         return $word;
+    }   
+    if (isset($_GET['generate'])) {
+
+        $firstWord = wordsGenerator(1,5);
+        $secondWord = wordsGenerator(7, 15);
+
+        echo '<h1>Generate a new word</h1>';
+        echo '<p>' . $firstWord . '</p>';
+        echo '<p>' . $secondWord . '</p>';
     }
-    
-    $firstWord = wordsGenerator(1,5);
-    $secondWord = wordsGenerator(7, 15);
-    
-    echo $firstWord . "<br>";
-    echo $secondWord;
+    echo '<form method="GET" action="">';
+    echo '<button type="submit" name="generate" value="true">Generate</button>';
+    echo '</form>';
+
+    echo '<br><br>';
+    // De-capitalize the string : "STOP YELLING I CAN'T HEAR MYSELF THINKING!!"
+
+    $str = "STOP YELLING I CAN'T HEAR MYSELF THINKING!!";
+    $str = strtolower($str);
+    echo $str;
+
+    echo '<br><br>';
+
+    // In your new job, you have to maintain the code of a former developer. 
+    // Make it DRY by creating a custom function calculate_cone_volume :
+
+    function calculate_cone_volume($ray, $height){
+        // Volume of a cone = (Pi) multiply (ray**2) multiply (height) multiply 1/3
+        $volume = $ray * $ray * 3.14 * $height * (1/3);
+        echo 'The volume of a cone with ray ' . $ray . ' and height ' . $height . ' is ' . $volume . ' cm<sup>3</sup><br />';
+    }
+    calculate_cone_volume(5, 2);
+    calculate_cone_volume(3, 4);
     
     ?>
+
+
 </body>
 </html>
