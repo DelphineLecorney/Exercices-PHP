@@ -71,9 +71,21 @@ $res = lenString($tab);
 print_r($res);
 
 ?>
-
+<br>
 <!-- Exercice 6 : Écrire une fonction nommée calcul_moyenne($tab) qui prend en paramètre 
 un tableau de nombres $tab et renvoie la moyenne de ces nombres. -->
+<?php
+function calcul_moyenne($tab){
+    $sum = 0;
+    for($i = 0; $i < count($tab); $i++){
+        $sum = $sum + $tab[$i];
+    }
+    $avg = $sum / count($tab);
+    return $avg;
+}
+$tab = [5, 10, 15, 20, 25];
+echo calcul_moyenne($tab);
+?>
 
 <!-- Exercice 7 : Écrire une fonction nommée remplacer_voyelles($chaine) qui prend en 
 paramètre une chaîne de caractères $chaine et renvoie une nouvelle chaîne où toutes 
