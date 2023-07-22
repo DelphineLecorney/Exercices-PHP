@@ -27,9 +27,17 @@ function total($tab){
 $tab = [5, 10, 15, 20, 25];
 echo total($tab);
 ?>
-
+<br>
 <!-- Exercice 3 : Écrire une fonction qui prend en paramètre une chaîne de caractères 
 et renvoie la même chaîne mais en inversant l'ordre des caractères. -->
+
+<?php
+function inverseString($string){
+    return strrev($string);
+}
+$string = "Hello Word";
+echo inverseString($string);
+?>
 
 <!-- Exercice 4 : Écrire une fonction qui prend en paramètre un nombre et renvoie 
 le nombre de chiffres présents dans ce nombre. -->
