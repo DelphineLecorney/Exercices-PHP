@@ -16,15 +16,24 @@ $positif_1 = positif(5);
 echo $positif_1;
 
 ?>
+<br>
+<!-- Exercice 2 : Écrire une fonction qui prend en paramètre un tableau de nombres
+et renvoie la somme de tous les éléments du tableau. -->
+<?php
+function total($tab){
+    $sum = array_sum($tab);
+    return $sum;
+}    
+$tab = [5, 10, 15, 20, 25];
+echo total($tab);
+?>
 
-<!-- Exercice 2 : Écrire une fonction qui prend en paramètre un tableau de nombres et renvoie 
-la somme de tous les éléments du tableau. -->
+<!-- Exercice 3 : Écrire une fonction qui prend en paramètre une chaîne de caractères 
+et renvoie la même chaîne mais en inversant l'ordre des caractères. -->
 
-<!-- Exercice 3 : Écrire une fonction qui prend en paramètre une chaîne de caractères et renvoie 
-la même chaîne mais en inversant l'ordre des caractères. -->
+<!-- Exercice 4 : Écrire une fonction qui prend en paramètre un nombre et renvoie 
+le nombre de chiffres présents dans ce nombre. -->
 
-<!-- Exercice 4 : Écrire une fonction qui prend en paramètre un nombre et renvoie le nombre de chiffres 
-présents dans ce nombre. -->
-
-<!-- Exercice 5 : Écrire une fonction qui prend en paramètre un tableau de chaînes de caractères et 
-renvoie un nouveau tableau contenant uniquement les chaînes de caractères dont la longueur est supérieure à 5. -->
+<!-- Exercice 5 : Écrire une fonction qui prend en paramètre un tableau de chaînes 
+de caractères et renvoie un nouveau tableau contenant uniquement les chaînes 
+de caractères dont la longueur est supérieure à 5. -->
