@@ -49,7 +49,32 @@ function countNumber($num){
 $num = '1234';
 echo countNumber($num);
 ?>
-
+<br>
 <!-- Exercice 5 : Écrire une fonction qui prend en paramètre un tableau de chaînes 
 de caractères et renvoie un nouveau tableau contenant uniquement les chaînes 
 de caractères dont la longueur est supérieure à 5. -->
+
+<?php
+function lenString($tab)
+{
+    $res = array();
+
+    foreach($tab as $strings) {
+        if(strlen($strings) > 5) {
+            $res[] = $strings;
+        }
+    }
+    return $res;
+}
+$tab = ['une', 'petite', 'et', 'une', 'grande', 'chaîne', 'de', 'caractères'];
+$res = lenString($tab);
+print_r($res);
+
+?>
+
+<!-- Exercice 6 : Écrire une fonction nommée calcul_moyenne($tab) qui prend en paramètre 
+un tableau de nombres $tab et renvoie la moyenne de ces nombres. -->
+
+<!-- Exercice 7 : Écrire une fonction nommée remplacer_voyelles($chaine) qui prend en 
+paramètre une chaîne de caractères $chaine et renvoie une nouvelle chaîne où toutes 
+les voyelles (a, e, i, o, u, y) sont remplacées par le caractère '-'. -->
