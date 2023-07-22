@@ -38,9 +38,17 @@ function inverseString($string){
 $string = "Hello Word";
 echo inverseString($string);
 ?>
-
+<br>
 <!-- Exercice 4 : Écrire une fonction qui prend en paramètre un nombre et renvoie 
 le nombre de chiffres présents dans ce nombre. -->
+<?php
+function countNumber($num){
+    $res = strlen($num);
+    return $res;
+}
+$num = '1234';
+echo countNumber($num);
+?>
 
 <!-- Exercice 5 : Écrire une fonction qui prend en paramètre un tableau de chaînes 
 de caractères et renvoie un nouveau tableau contenant uniquement les chaînes 
