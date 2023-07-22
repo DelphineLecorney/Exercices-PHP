@@ -103,3 +103,15 @@ galley of type and scrambled it to make a type specimen book.";
 $resChaine = remplacer_voyelles($chaine);
 echo $resChaine;
 ?>
+
+<!-- Exercice 8 : Écrire une fonction nommée est_palindrome($chaine) qui prend en paramètre 
+une chaîne de caractères $chaine et renvoie true si la chaîne est un palindrome, 
+Sinon, la fonction doit renvoyer false. -->
+
+<!-- Exercice 9 : Écrire une fonction nommée compter_mots($chaine) qui prend en paramètre 
+une chaîne de caractères $chaine et renvoie le nombre de mots présents dans cette chaîne. 
+Les mots sont séparés par des espaces. -->
+
+<!-- Exercice 10 : Écrire une fonction nommée generer_mot_de_passe($longueur) qui génère et 
+renvoie un mot de passe aléatoire de la longueur spécifiée $longueur. Le mot de passe 
+doit être composé de lettres majuscules, de lettres minuscules et de chiffres. -->
