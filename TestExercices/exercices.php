@@ -86,7 +86,20 @@ function calcul_moyenne($tab){
 $tab = [5, 10, 15, 20, 25];
 echo calcul_moyenne($tab);
 ?>
-
+<br>
 <!-- Exercice 7 : Écrire une fonction nommée remplacer_voyelles($chaine) qui prend en 
 paramètre une chaîne de caractères $chaine et renvoie une nouvelle chaîne où toutes 
 les voyelles (a, e, i, o, u, y) sont remplacées par le caractère '-'. -->
+
+<?php
+function remplacer_voyelles($chaine){
+    $newChaine = str_replace(array('a', 'e', 'i', 'o', 'u', 'y'), '-', $chaine);
+    return $newChaine;
+}
+$chaine = "Lorem Ipsum is simply dummy text of the 
+printing and typesetting industry. Lorem Ipsum has been the industry's 
+standard dummy text ever since the 1500s, when an unknown printer took a 
+galley of type and scrambled it to make a type specimen book.";
+$resChaine = remplacer_voyelles($chaine);
+echo $resChaine;
+?>
