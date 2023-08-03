@@ -1,6 +1,6 @@
 
 
-<!-- **********The index for see the laracast.php*********** -->
+<!-- **********The index for test the laracast.php*********** -->
 
 
 <!DOCTYPE html>
@@ -8,73 +8,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
+    <title>Document</title>
 </head>
 <body>
-    <h2>Recommended Books</h2>
-
-    <?php
+<?php
         $books = [
             [
                 'name' => 'Do Androids Dream of Electric Sheep',
                 'author' => 'Philip K. Dick',
                 'releaseYear' => 1968,
                 'purchaseUrl' => 'http://example.com'
-
             ],
             [
-                'name' => "The Langoliers",
-                'author' => "Andy Weir",
+                'name' => 'Project Hail Mary',
+                'author' => 'Andy Weir',
                 'releaseYear' => 2021,
                 'purchaseUrl' => 'http://example.com'
             ],
             [
-                'name' => "The Martian",
-                'author' => "Andy Weir",
+                'name' => 'The Martian',
+                'author' => 'Andy Weir',
                 'releaseYear' => 2011,
                 'purchaseUrl' => 'http://example.com'
             ],
         ];
 
-        function filterByAuthor($books, $author){
-            $filteredBooks = [];
-
-            foreach($books as $book){
-                if($book['author'] === 'Andy Weir'){
-                    $filteredBooks[] = $book;
-                }
-            }
-            return $filteredBooks;
-        }
-
-        // Or function
-
-        function filter($items, $key, $value){
-
-            $filteredItems = [];
-
-            foreach($items as $item){
-                if($item[$key] === $value){
-                    $filteredItems[] = $item;
-                }
-            }
-            return $filteredItems;
-        }
-
-        $filteredBooks = filter($books, 'author', 'Andy Weir');
-
+        $filteredBooks = array_filter($books, function ($book) {
+            return $book['releaseYear'] >= 1950 && $book['releaseYear'] <= 2020;
+        });
     ?>
 
     <ul>
-        <?php foreach (filterByAuthor($books, 'Andy Weir') as $book) :?> 
-
+        <?php foreach ($filteredBooks as $book) : ?>
             <li>
                 <a href="<?= $book['purchaseUrl'] ?>">
-                    <?= $book['name'] ?>(<?= $book['releaseYear' ]?>) - By <?= $book['author'] ?>
+                    <?= $book['name']; ?> (<?= $book['releaseYear'] ?>) - By <?= $book['author'] ?>
                 </a>
             </li>
-
-        <?php endforeach ?>
+        <?php endforeach; ?>
     </ul>
 </body>
 </html>

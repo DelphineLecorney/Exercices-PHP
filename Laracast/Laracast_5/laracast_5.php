@@ -1,4 +1,5 @@
-Use a PHP short echo tag to display the string, "Hello World" on the page.
+
+<!-- Use a PHP short echo tag to display the string, "Hello World" on the page. -->
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,7 +1,3 @@
-
-<!-- Extend the book list from this episode's example to also 
-include and display the release year immediately after the book's title. -->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,15 +19,25 @@ include and display the release year immediately after the book's title. -->
                 'author' => 'Andy Weir',
                 'releaseYear' => 2021,
                 'purchaseUrl' => 'http://example.com'
-            ]
+            ],
+            [
+                'name' => 'The Martian',
+                'author' => 'Andy Weir',
+                'releaseYear' => 2011,
+                'purchaseUrl' => 'http://example.com'
+            ],
         ];
+
+        $filteredBooks = array_filter($books, function ($book) {
+            return $book['author'] === 'Andy Weir';
+        });
     ?>
 
     <ul>
-        <?php foreach ($books as $book) : ?>
+        <?php foreach ($filteredBooks as $book) : ?>
             <li>
                 <a href="<?= $book['purchaseUrl'] ?>">
-                    <?= $book['name'] ?> (<?= $book['releaseYear'] ?>)
+                    <?= $book['name']; ?> (<?= $book['releaseYear'] ?>) - By <?= $book['author'] ?>
                 </a>
             </li>
         <?php endforeach; ?>
